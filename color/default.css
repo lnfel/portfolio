@@ -1,5 +1,5 @@
 
-a,a:hover {
+a,a:hover, a .fab {
 	color: #d43076;
 }
 
@@ -7,11 +7,11 @@ a,a:hover {
 	color: #d43076;
 }
 
-.icon:hover .fa{
+.icon:hover .fa, .icon:hover .fab{
 	color: #d43076;
 }
 
-ul.nav li a:hover {
+ul li a:hover {
 	color: #d43076;
 }
 
@@ -29,8 +29,29 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 }
 
 footer {
-    background-color: #d43076;
+  background: url(../assets/images/fancy-floral-pattern-384.jpg) left; /* #d43076 */
+  animation: scroll 30s linear infinite;
+  /*border-top: 4px solid #d43076;
+  border-bottom: 4px solid #d43076;*/
 }
+
+@keyframes scroll {
+	0% {
+		background-position: left;
+	}
+	50% {
+		background-position: right;	
+	}
+	100% {
+		background-position: left;
+	}
+}
+
+/*footer p, footer .credits {
+	-webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}*/
 
 .btn-skin {
   color: #fff;

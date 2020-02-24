@@ -1,16 +1,11 @@
-(function ($) {
+$(function(){
 
 	new WOW().init();
-	
-	$(window).load(function(){
-      $("#navigation").sticky({ topSpacing: 0 });
-    });
 
-	jQuery(window).load(function() { 
-		jQuery("#preloader").delay(100).fadeOut("slow");
-		jQuery("#load").delay(100).fadeOut("slow");
-	});
+	//$("#navigation").sticky({ topSpacing: 0 });
 
+	$("#preloader").delay("slow").fadeOut("slow");
+	$("#load").delay("slow").fadeOut("slow");
 
 	//jQuery for page scrolling feature - requires jQuery Easing plugin
 	$(function() {
@@ -39,13 +34,31 @@
 	
 	//owl carousel
 	$('#owl-works').owlCarousel({
-            items : 4,
-            itemsDesktop : [1199,5],
-            itemsDesktopSmall : [980,5],
-            itemsTablet: [768,5],
-            itemsTabletSmall: [550,2],
-            itemsMobile : [480,2],
-        });
+		responsiveClass:true,
+		responsive:{
+      0:{
+        items:1
+      },
+      600:{
+        items:3
+      },
+      1000:{
+        items:5,
+        loop:false
+      }
+    },
+	});
+
+	$('#owl-icons').owlCarousel({
+		animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    items:3,
+    loop:true,
+    autoplay:true,
+    autoplayTimeout:1000,
+    autoplayHoverPause:true,
+    smartSpeed:450,
+	});
 	
 	//nivo lightbox
 	$('.owl-carousel .item a').nivoLightbox({
@@ -65,17 +78,15 @@
 	
 	
 	//parallax
-        if ($('.parallax').length)
-        {
-			$(window).stellar({
-				responsive:true,
-                scrollProperty: 'scroll',
-                parallaxElements: false,
-                horizontalScrolling: false,
-                horizontalOffset: 0,
-                verticalOffset: 0
-            });
-
-        }
-
-})(jQuery);
+  if ($('.parallax').length)
+  {
+		$(window).stellar({
+			responsive:true,
+	    scrollProperty: 'scroll',
+	    parallaxElements: false,
+	    horizontalScrolling: false,
+	    horizontalOffset: 0,
+	    verticalOffset: 0
+		});
+  }
+});

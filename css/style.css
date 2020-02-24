@@ -10,7 +10,7 @@
 
 body {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
     color: #888;
@@ -40,6 +40,9 @@ blockquote {
 	font-family: Georgia, arial, sans-serif;
 	color: #bbb;
 	font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-left: 5px solid #eee;
 }
 
 p {
@@ -75,7 +78,8 @@ img.img-responsive {
 /* ------- Navigation ------------ */
 #navigation {
 	background: #fff;
-	z-index: 9999;
+    top: 0;
+	z-index: 150;
 	width:100%;
     box-sizing:border-box;
 	border-bottom: 1px solid #eee;
@@ -108,7 +112,7 @@ img.img-responsive {
 	margin: 0 auto;
 }
 
-.navbar-custom ul.nav {
+.navbar-custom ul {
 	text-align: center;
 	float: none;
 	margin: 0 auto;
@@ -118,7 +122,7 @@ img.img-responsive {
 	display: inline-block;
 	text-align: center;
 }
-.navbar-custom ul.nav li a {
+.navbar-custom ul li a {
 	font-size: 14px;
 	letter-spacing: 1px;
     color: #444;
@@ -127,21 +131,21 @@ img.img-responsive {
 }
 
 
-.navbar-custom .nav li a {
+.navbar-custom ul li a {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
 }
 
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus,
-.navbar-custom .nav li.active {
+.navbar-custom ul li a:hover,
+.navbar-custom ul li a:focus,
+.navbar-custom ul li.active {
     outline: 0;
     background-color: rgba(255,255,255,.2);
 }
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus,
-.navbar-custom .nav li.active {
+.navbar-custom ul li a:hover,
+.navbar-custom ul li a:focus,
+.navbar-custom ul li.active {
     outline: 0;
     background-color: rgba(255,255,255,.2);
 }
@@ -157,6 +161,9 @@ img.img-responsive {
     outline: 0;
 }
 
+.navbar-header .fa {
+    color: #666;
+}
 
 /* loader */
 #preloader {
@@ -261,6 +268,10 @@ hr {
     z-index:120;
 }
 
+.home-section img {
+    top: 61px;
+}
+
 .section-heading {
 	margin-bottom: 50px;
 }
@@ -361,7 +372,7 @@ hr {
 --- About
 ============================ */
 
-.icon .fa {
+.icon .fa, .fab {
 	color: #fff;
 }
 
@@ -466,7 +477,6 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 footer {
 	text-align: center;
 	padding: 50px 0 30px;
-	
 }
 
 footer p {
@@ -496,7 +506,7 @@ Parallax
 	margin-bottom: 20px;
 }
 
-#separator span {
+#separator {
 	color: #fff;
 }
 
@@ -651,11 +661,14 @@ a.btn:hover {
 
 /* Media queries */
 
+@media (min-width: 992px) {
+    .home-section img {
+        top: 72px;
+    }
+}
+
 @media (max-width:768px) {
-	.navbar-header .fa {
-		color: #666;
-	}
-	
+
 	.col-xs-6 {
 		margin-bottom: 30px;
 	}
@@ -712,4 +725,17 @@ a.btn:hover {
         left: 0;
         height: 100%;
     } 
+}
+
+.line:before, .line:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    height: 3px;
+}
+
+.line:before {
+    left: 0;
+    width: 100%;
+    background-color: #d43076;
 }

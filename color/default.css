@@ -3,6 +3,10 @@ a,a:hover, a .fab {
 	color: #d43076;
 }
 
+.nav-link.active {
+	color: #d43076;
+}
+
 .intro .page-scroll a:hover {
 	color: #d43076;
 }

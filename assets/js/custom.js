@@ -7,6 +7,8 @@ $(function(){
 	$("#preloader").delay("slow").fadeOut("slow");
 	$("#load").delay("slow").fadeOut("slow");
 
+	$('body').scrollspy({ target: '.navbar .container' });
+
 	//jQuery for page scrolling feature - requires jQuery Easing plugin
 	$(function() {
 		$('.navbar-nav li a').bind('click', function(event) {

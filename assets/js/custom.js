@@ -13,10 +13,29 @@ $(function(){
 	$(function() {
 		$('.navbar-nav li a').bind('click', function(event) {
 			var $anchor = $(this);
-			$('.navbar-collapse').collapse('toggle');
 			$('html, body').stop().animate({
 				scrollTop: $($anchor.attr('href')).offset().top
 			}, 1500, 'easeInOutExpo');
+			/*var about = 150;
+			if($(this).attr('href') == '#about'){
+				console.log('About!');
+			}*/
+			/*$.fn.a = function() {
+				$('html, body').stop().animate({
+					scrollTop: $($anchor.attr('href')).offset().top
+				}, 1500, 'easeInOutExpo');
+				//, function() { $('.navbar-collapse').collapse('toggle'); }
+				return this;
+			}
+
+			$.fn.b = function() {
+				$('.navbar-collapse').collapse('toggle');
+				return this;
+			}
+
+			$('body').a().b();*/
+			
+			/*$('.navbar-collapse').collapse('toggle');*/
 			event.preventDefault();
 		});
 		$('.page-scroll a').bind('click', function(event) {

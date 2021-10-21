@@ -1,0 +1,24 @@
+{
+  "name": "bk2o1-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lnfel/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lnfel/portfolio/issues"
+  },
+  "homepage": "https://lnfel.github.io/portfolio",
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.10",
+    "tailwindcss": "^2.2.17"
+  }
+}

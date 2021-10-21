@@ -1,2 +1,5 @@
 Build tailwindcss
 npx tailwindcss-cli build -i resources/css/main.css -o assets/css/main.css
+
+Run Vite dev server
+npm run dev
